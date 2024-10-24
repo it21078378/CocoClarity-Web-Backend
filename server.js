@@ -31,7 +31,7 @@ app.use(express.urlencoded({
 }));
 app.use(cors());
 
-const PORT = process.env.PORT || 5050;
+// const PORT = process.env.PORT || 3000;
 
 
 app.use(cors());
@@ -49,9 +49,9 @@ app.use('/api/coconut-oils', coconutOilRoutes);
 app.use('/api/twitter', twitterRoutes);
 
 
-
-
+const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
 // start the Express server
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Server listening on port ${PORT}`);
 });
